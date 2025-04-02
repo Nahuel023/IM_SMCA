@@ -1,0 +1,74 @@
+[1/5] cmd.exe /C "cd /D C:\Users\Alexi\workspace\ESP_CLIENT\build\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3/components/partition_table/check_sizes.py --offset 0x8000 partition --type app C:/Users/Alexi/workspace/ESP_CLIENT/build/partition_table/partition-table.bin C:/Users/Alexi/workspace/ESP_CLIENT/build/main.bin"
+main.bin binary size 0xe4850 bytes. Smallest app partition is 0x100000 bytes. 0x1b7b0 bytes (11%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D C:\Users\Alexi\workspace\ESP_CLIENT\build\bootloader\esp-idf\esptool_py && C:\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe C:/Espressif/frameworks/esp-idf-v5.3/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 C:/Users/Alexi/workspace/ESP_CLIENT/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/3] cmd.exe /C "cd /D C:\Espressif\frameworks\esp-idf-v5.3\components\esesptool.py --chip esp32 -p COM4 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 2MB 0x1000 bootloader/bootloader.bin 0x10000 main.bin 0x8000 partition_table/partition-table.bin
+esptool.py v4.8.dev4
+Serial port COM4
+Connecting..........
+Chip is ESP32-D0WD-V3 (revision v3.0)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: e0:5a:1b:5f:0d:fc
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x000f4fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+SHA digest in image updated
+Compressed 26752 bytes to 16358...
+Writing at 0x00001000... (100 %)
+Wrote 26752 bytes (16358 compressed) at 0x00001000 in 0.8 seconds (effective 252.0 kbit/s)...
+Hash of data verified.
+Compressed 936016 bytes to 589635...
+Writing at 0x00010000... (2 %)
+Writing at 0x0001c9e3... (5 %)
+Writing at 0x00025d81... (8 %)
+Writing at 0x0002abd9... (11 %)
+Writing at 0x00033d06... (13 %)
+Writing at 0x0003ca84... (16 %)
+Writing at 0x000425a6... (19 %)
+Writing at 0x00048129... (22 %)
+Writing at 0x0004e1cd... (25 %)
+Writing at 0x00053d46... (27 %)
+Writing at 0x00059c93... (30 %)
+Writing at 0x0005f83d... (33 %)
+Writing at 0x00065f0f... (36 %)
+Writing at 0x0006afb2... (38 %)
+Writing at 0x0007038e... (41 %)
+Writing at 0x00075a0e... (44 %)
+Writing at 0x0007b1d5... (47 %)
+Writing at 0x00080572... (50 %)
+Writing at 0x00085d57... (52 %)
+Writing at 0x0008bd1c... (55 %)
+Writing at 0x000916a9... (58 %)
+Writing at 0x000972ef... (61 %)
+Writing at 0x0009cf41... (63 %)
+Writing at 0x000a29e2... (66 %)
+Writing at 0x000a833b... (69 %)
+Writing at 0x000ae13c... (72 %)
+Writing at 0x000b4695... (75 %)
+Writing at 0x000ba167... (77 %)
+Writing at 0x000bfc59... (80 %)
+Writing at 0x000c5812... (83 %)
+Writing at 0x000cae53... (86 %)
+Writing at 0x000d451b... (88 %)
+Writing at 0x000dd78c... (91 %)
+Writing at 0x000e354e... (94 %)
+Writing at 0x000e9575... (97 %)
+Writing at 0x000ef10b... (100 %)
+Wrote 936016 bytes (589635 compressed) at 0x00010000 in 13.6 seconds (effective 550.3 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 103...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (103 compressed) at 0x00008000 in 0.1 seconds (effective 323.6 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
+ptool_py && C:\Espressif\tools\cmake\3.24.0\bin\cmake.exe -D IDF_PATH=C:/Espressif/frameworks/esp-idf-v5.3 -D SERIAL_TOOL=C:/Espressif/python_env/idf5.3_py3.11_env/Scripts/python.exe;;C:/Espressif/frameworks/esp-idf-v5.3/components/esptool_py/esptool/esptool.py;--chip;esp32 -D SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args -D WORKING_DIRECTORY=C:/Users/Alexi/workspace/ESP_CLIENT/build -P C:/Espressif/frameworks/esp-idf-v5.3/components/esptool_py/run_serial_tool.cmake"
